@@ -1,0 +1,13 @@
+instalar el paquete
+pip install flask_mysql
+
+Python >=3.10
+py -m pip install Falsk ==2.2.2
+py -m pip install werkzeug==2.2.2
+
+py -m pip install flask_mysql
+py -m pip install flask_cors
+
+
+Librería que reemplaza Jquery
+- https://github.com/fabiospampinato/cash

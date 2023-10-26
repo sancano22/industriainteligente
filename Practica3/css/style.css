@@ -1,0 +1,30 @@
+ul{
+   list-style-type: none; 
+   display:flex;
+}
+
+ul li{
+    font-size: 18px;
+    color: #df8352;
+    margin:10px;
+    background-color: black;
+    padding:10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+ul li a{
+    text-decoration: none;
+    color:#df8352;
+}
+
+footer{
+    text-align: center;
+    background-color: black;
+    padding:10px;
+    color:white;
+}
+
+section{
+    text-align:center;
+}
+
