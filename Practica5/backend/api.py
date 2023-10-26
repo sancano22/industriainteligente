@@ -16,6 +16,7 @@ mysql.init_app(app)
 CORS(app, resources={r"/*": {"origins": "*"}})
 app.config['CORS_HEADERS'] = 'Content-Type'
 
+
 @app.route('/galvanico',methods=['GET','POST'])
 @cross_origin(origin='*',headers=['Content-Type','Authorization'])
 def galvanico():
