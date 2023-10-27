@@ -1,8 +1,124 @@
-ul{
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap');
+*{
+    margin:0;
+    padding:0;
+    border:none;
+    outline:none;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+}
+
+.sidebar{
+    position: sticky;
+    top:0;
+    left:0;
+    bottom:0;
+    width:115px;
+    height: 100vh;
+    padding:0 1.7rem;
+    color:#fff;
+    overflow: hidden;
+    transition: all 0.5s linear;
+    background:rgb(113,99,186,255);
+}
+
+.sidebar:hover{
+    width:280px;
+    transition: 0.5s;
+}
+
+.menu{
+    height: 88%;
+    position: relative;
+    list-style: none;
+    padding: 0;
+}
+.menu li{
+    padding:1rem;
+    margin:8px 0;
+    border-radius: 8px;
+    transition:all;
+    text-align: left;
+}
+.menu li:hover,
+.active{
+  background:#e0e0e058;
+}
+.menu a{
+    color:#fff;
+    font-size: 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap:1.5rem;
+
+}
+.menu a label{
+    overflow: hidden;
+
+}
+
+.menu span{
+    font-size: 1.5rem;
+}
+.main-content{
+    position: relative;
+    background: #ebe9e9;
+    width: 100%;
+    padding: 1rem;
+}
+
+.header-wrapper{
+    width: 50px;
+    height:50px;
+    cursor:pointer;
+    border-radius: 50%;
+}
+.header-wrapper{
+    position: relative;
+    width: 100%;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    height: 120px;
+    margin:10px;
+}
+.header-wrapper select{
+    border:1px solid black;
+    width:220px;
+    height: 30px;
+}
+.graficas{
+    background-color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    height: auto;
+    margin:10px;
+}
+ul#graficas{
     list-style-type: none;
     display:flex;
 }
 
-nav{
+section{
     text-align:center;
 }
+
+
+
+.promedio{
+    
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+  }
+  

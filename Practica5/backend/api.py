@@ -59,7 +59,26 @@ def pacientes():
     data = cursor.fetchall()
     return jsonify({"results":data})
 
+@app.route('/promedio',methods=['GET','POST'])
+@cross_origin(origin='*',headers=['Content-Type','Authorization'])
 
+def promedio():
+    conn = mysql.connect()
+    cursor =conn.cursor()
+    if request.method == 'GET':
+        cursor.execute('''SELECT avg(valor) from galvanico''')
+        data1 = cursor.fetchall()
+        cursor.execute('''SELECT avg(valor) from pulsimetro''')
+        data2 = cursor.fetchall()
+    else:
+        idpaciente=json.loads(request.data)
+        cursor.execute('''SELECT avg(valor) from galvanico where IDpaciente=%s''',(idpaciente["idpaciente"]))
+        data1 = cursor.fetchall()
+
+        cursor.execute('''SELECT avg(valor) from galvanico where IDpaciente=%s''',(idpaciente["idpaciente"]))
+        data2 = cursor.fetchall()
+
+    return jsonify({"results":{"promedioGalvanico":data1,"promedioPulsimetro":data2}})
 
 if __name__ == "__main__":
     app.run(debug=True)
